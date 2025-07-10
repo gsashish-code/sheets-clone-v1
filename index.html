@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheet v1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols" />
+</head>
+<body>
+    <!-- ==================== PAGE ACTIONS ============================ -->
+    <div class="page-actions-container">
+        <div class="page-action">Home</div>
+        <div class="page-action">File</div>
+        <div class="page-action">Insert</div>
+        <div class="page-action">Layout</div>
+        <div class="page-action">Help</div>
+    </div>
+    <!-- =================== CELL PROPERTIES ============================ -->
+    <div class="cellProps-action-container">
+        <span class="material-symbols">
+        content_copy
+        </span>
+        <span class="material-symbols">
+        content_cut
+        </span>
+        <span class="material-symbols">
+        content_paste
+        </span>
+        <span class="material-symbols">
+        format_bold
+        </span>
+        <span class="material-symbols">
+        format_italic
+        </span>
+        <span class="material-symbols">
+        format_underlined
+        </span>
+         <span class="material-symbols">
+        format_color_fill
+        </span>
+        <select  class="font-family">
+            <option value="Arial">Arial</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+        </select>
+            <span class="material-symbols">
+            format_color_text
+            </span>
+         <select  class="font-size">
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="14">14</option>
+            <option value="16">16</option>            
+        </select>
+        <span class="material-symbols">
+        format_align_left
+        </span>
+        <span class="material-symbols">
+        format_align_center
+        </span>
+        <span class="material-symbols">
+        format_align_right
+        </span>   
+    </div>
+    <!-- =================== FORMULA BAR ============================ -->
+    <div class="formula-action-container">
+        <input type="text" readonly name="" id="" class="address-bar">
+        <span class="material-symbols">
+            function
+        </span>
+        <input type="text" name="" id="" class="formula-bar">
+    </div>
+    <!-- =================== GRID ============================ -->
+    <div class="grid-container">
+        <div class="top-left-dummy"></div>
+        <div class="address-col-container"></div>
+        <div class="cells-container">
+            <div class="address-row-container"></div>
+        </div>
+    </div>
+
+    <!-- =================== SHEETS ============================ -->
+    <div class="sheets-action-container">
+        <div class="sheet-add-icon">
+            <span class="material-symbols">
+                post_add
+            </span>
+        </div>
+        <div class="sheets-folder-container">
+            <div class="sheet-folder">
+                Sheet 1
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
