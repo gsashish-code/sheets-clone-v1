@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sheet v1</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols" />
 </head>
 <body>
@@ -19,26 +19,24 @@
     <!-- =================== CELL PROPERTIES ============================ -->
     <div class="cellProps-action-container">
         <span class="material-symbols">
-        content_copy
+            content_copy
         </span>
         <span class="material-symbols">
-        content_cut
+            content_cut
         </span>
         <span class="material-symbols">
-        content_paste
+            content_paste
         </span>
         <span class="material-symbols">
-        format_bold
+            format_bold
         </span>
         <span class="material-symbols">
-        format_italic
+            format_italic
         </span>
         <span class="material-symbols">
-        format_underlined
+            format_underlined
         </span>
-         <span class="material-symbols">
-        format_color_fill
-        </span>
+        
         <select  class="font-family">
             <option value="Arial">Arial</option>
             <option value="Courier New">Courier New</option>
@@ -46,21 +44,36 @@
             <option value="Times New Roman">Times New Roman</option>
             <option value="Verdana">Verdana</option>
         </select>
-            <span class="material-symbols">
-            format_color_text
-            </span>
+          
          <select  class="font-size">
             <option value="10">10</option>
             <option value="12">12</option>
             <option value="14">14</option>
             <option value="16">16</option>            
         </select>
+
+        <div class="color-property">
+            <span class="material-symbols">
+            format_color_fill
+            </span>
+            <input type="color" name="" id="bg-color">
+        </div>
+
+        <div class="color-property">
+            <span class="material-symbols">
+                format_color_text
+            </span>
+            <input type="color" name="" id="font-color">
+        </div>
+
         <span class="material-symbols">
         format_align_left
         </span>
+
         <span class="material-symbols">
         format_align_center
         </span>
+
         <span class="material-symbols">
         format_align_right
         </span>   
@@ -95,6 +108,7 @@
             </div>
         </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="./scripts/grid.js"></script>
+    <script src="./scripts/cells-property.js"></script>
 </body>
 </html>
