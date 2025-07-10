@@ -18,26 +18,26 @@
     </div>
     <!-- =================== CELL PROPERTIES ============================ -->
     <div class="cellProps-action-container">
-        <span class="material-symbols">
+        <span id="copy" class="material-symbols">
             content_copy
         </span>
-        <span class="material-symbols">
+        <span id="cut" class="material-symbols">
             content_cut
         </span>
-        <span class="material-symbols">
+        <span id="paste" class="material-symbols">
             content_paste
         </span>
-        <span class="material-symbols">
+        <span id="bold" class="material-symbols">
             format_bold
         </span>
-        <span class="material-symbols">
+        <span id="italic" class="material-symbols">
             format_italic
         </span>
-        <span class="material-symbols">
+        <span id="underline" class="material-symbols">
             format_underlined
         </span>
         
-        <select  class="font-family">
+        <select id="font-family"  class="font-family">
             <option value="Arial">Arial</option>
             <option value="Courier New">Courier New</option>
             <option value="Georgia">Georgia</option>
@@ -45,7 +45,7 @@
             <option value="Verdana">Verdana</option>
         </select>
           
-         <select  class="font-size">
+         <select id="font-size"  class="font-size">
             <option value="10">10</option>
             <option value="12">12</option>
             <option value="14">14</option>
@@ -56,7 +56,7 @@
             <span class="material-symbols">
             format_color_fill
             </span>
-            <input type="color" name="" id="bg-color">
+            <input  type="color" name="" id="bg-color">
         </div>
 
         <div class="color-property">
@@ -66,15 +66,15 @@
             <input type="color" name="" id="font-color">
         </div>
 
-        <span class="material-symbols">
+        <span id="left-align" class="material-symbols">
         format_align_left
         </span>
 
-        <span class="material-symbols">
+        <span id="center-align" class="material-symbols">
         format_align_center
         </span>
 
-        <span class="material-symbols">
+        <span id="right-align" class="material-symbols">
         format_align_right
         </span>   
     </div>
@@ -108,7 +108,10 @@
             </div>
         </div>
     </div>
+    <script src="./scripts/constants.js"></script>
+    <script src="./scripts/selectors.js"></script>
     <script src="./scripts/grid.js"></script>
-    <script src="./scripts/cells-property.js"></script>
+    <script src="./scripts/initial-db.js"></script>
+    <script src="./scripts/cell-properties.js"></script>
 </body>
 </html>

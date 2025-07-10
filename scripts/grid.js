@@ -1,11 +1,6 @@
 let ROW = 100;
 let COL = 26;
 
-const addressRowContainer = document.querySelector(".address-row-container");
-const addressColContainer = document.querySelector(".address-col-container");
-const cellsContainer = document.querySelector(".cells-container");
-const addressBar = document.querySelector(".address-bar");
-
 function addHeaderCellRow() {
   for (let i = 0; i < COL; i++) {
     const addressRow = document.createElement("div");
