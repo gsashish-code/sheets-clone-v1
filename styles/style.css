@@ -233,3 +233,9 @@ body {
     font-weight: bold;
     text-decoration-thickness: 2px;
 }
+
+.active {
+    padding: 0.1rem 0.2rem;
+    background-color: #dbdbdb;
+    border-radius: 5px;
+}

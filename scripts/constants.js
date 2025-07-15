@@ -1,3 +1,6 @@
+let ROW = 100;
+let COL = 26;
+
 const CONTAINERS_NAMES = Object.freeze({
   ADDRESS_ROW_CONTAINER: ".address-row-container",
   ADDRESS_COL_CONTAINER: ".address-col-container",

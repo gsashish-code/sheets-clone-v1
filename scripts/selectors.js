@@ -11,6 +11,7 @@ const addressBar = document.querySelector(CONTAINERS_NAMES.ADDRESS_BAR);
 const cellPropertySelector = document.querySelector(
   CONTAINERS_NAMES.CELL_PROPERTY_SELECTOR
 );
+
 // ====================CELL PROPERTY SELECTOR NAME ==========
 // CELL ACTIONS
 const copyCellProperty = document.getElementById(CELL_PROPERTY_NAMES.COPY);
@@ -46,3 +47,5 @@ const bgColorCellProperty = document.getElementById(
 const textColorCellProperty = document.getElementById(
   CELL_PROPERTY_NAMES.FONT_COLOR
 );
+
+// ====================CELL PROPERTY SELECTOR END =================================

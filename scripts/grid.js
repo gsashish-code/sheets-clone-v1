@@ -1,6 +1,3 @@
-let ROW = 100;
-let COL = 26;
-
 function addHeaderCellRow() {
   for (let i = 0; i < COL; i++) {
     const addressRow = document.createElement("div");
@@ -47,9 +44,49 @@ function generateCells() {
 
 function updateAddressBar(cell) {
   const address = cell.getAttribute("data-address");
+  const row = cell.getAttribute("data-row");
+  const col = cell.getAttribute("data-col");
+
+  addressBar.setAttribute("data-selected-row", row);
+  addressBar.setAttribute("data-selected-col", col);
+  console.log("SHEET_DB[row][col]", SHEET_DB[row][col]);
+  updateCellProperties(SHEET_DB[row][col]);
   addressBar.value = address;
 }
+function getSelectedRowSelectedCol() {
+  const row = addressBar.getAttribute("data-selected-row");
+  const col = addressBar.getAttribute("data-selected-col");
+  return { row, col };
+}
 
+function getActiveCellElement() {
+  const { row, col } = getSelectedRowSelectedCol();
+  // console.log(`.cell[data-row="${row}"][data-col="${col}"]`);
+  return cellsContainer.querySelector(
+    `.cell[data-row="${row}"][data-col="${col}"]`
+  );
+}
+function updateCellProperties(data) {
+  boldCellProperty.classList.toggle("active", data.bold);
+  italicCellProperty.classList.toggle("active", data.italic);
+  underlineCellProperty.classList.toggle("active", data.underline);
+  leftAlignCellProperty.classList.toggle(
+    "active",
+    data.alignment === CELL_PROPERTY_NAMES.LEFT_ALIGN
+  );
+  centerAlignCellProperty.classList.toggle(
+    "active",
+    data.alignment === CELL_PROPERTY_NAMES.CENTER_ALIGN
+  );
+  rightAlignCellProperty.classList.toggle(
+    "active",
+    data.alignment === CELL_PROPERTY_NAMES.RIGHT_ALIGN
+  );
+  fontFamilyCellProperty.value = data.fontFamily;
+  fontSizeCellProperty.value = data.fontSize;
+  bgColorCellProperty.value = data.backgroundColor;
+  textColorCellProperty.value = data.textColor;
+}
 function attachCellEvents() {
   cellsContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("cell")) {
@@ -66,6 +103,11 @@ function initGrid() {
   generateCells();
   // attaching events
   attachCellEvents();
+
+  // selecting the first cell
+  const firstCell = cellsContainer.querySelector(".cell");
+  firstCell.focus();
+  updateAddressBar(firstCell);
 }
 
 initGrid();
