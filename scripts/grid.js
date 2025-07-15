@@ -49,9 +49,15 @@ function updateAddressBar(cell) {
 
   addressBar.setAttribute("data-selected-row", row);
   addressBar.setAttribute("data-selected-col", col);
-  console.log("SHEET_DB[row][col]", SHEET_DB[row][col]);
   updateCellProperties(SHEET_DB[row][col]);
   addressBar.value = address;
+}
+function updateCellValue(cell) {
+  const row = cell.getAttribute("data-row");
+  const col = cell.getAttribute("data-col");
+
+  console.log("SHEET_DB[row][col]", SHEET_DB);
+  SHEET_DB[row][col].value = cell.innerText;
 }
 function getSelectedRowSelectedCol() {
   const row = addressBar.getAttribute("data-selected-row");
@@ -91,6 +97,13 @@ function attachCellEvents() {
   cellsContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("cell")) {
       updateAddressBar(e.target);
+    }
+  });
+  console.log("cellsContainer", cellsContainer);
+  cellsContainer.addEventListener("focusout", (e) => {
+    if (e.target.classList.contains("cell")) {
+      console.log("value changed", e.target, e.target.innerText);
+      updateCellValue(e.target);
     }
   });
 }
